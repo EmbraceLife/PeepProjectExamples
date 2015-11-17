@@ -125,6 +125,16 @@
         "style": {}
       }
     },
+    "6": {
+      "title": "Drawing Catmull-Rom Splines",
+      "id": 21,
+      "ideas": {
+        "1": {
+          "title": "how curve() works",
+          "id": 22
+        }
+      }
+    },
     "11": {
       "title": "Bezier Ellipse ",
       "id": 20
