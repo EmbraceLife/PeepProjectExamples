@@ -20,17 +20,17 @@ void draw() {
   for (int y = 0; y < height; y += 10) line(0, y, width, y);
   stroke(0);
   curve(points[0].x, points[0].y,
-        points[0].x, points[0].y,
-        points[1].x, points[1].y,
-        points[2].x, points[2].y);
+       points[0].x, points[0].y,
+       points[1].x, points[1].y,
+       points[2].x, points[2].y);
   curve(points[0].x, points[0].y,
         points[1].x, points[1].y,
         points[2].x, points[2].y,
         points[3].x, points[3].y);
   curve(points[1].x, points[1].y,
-        points[2].x, points[2].y,
-        points[3].x, points[3].y,
-        points[3].x, points[3].y);
+       points[2].x, points[2].y,
+       points[3].x, points[3].y,
+       points[3].x, points[3].y);
   fill(0);
   ellipse(points[0].x, points[0].y, 4, 4);
   ellipse(points[3].x, points[3].y, 4, 4);
