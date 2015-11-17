@@ -119,7 +119,15 @@
             }
           }
         }
+      },
+      "attr": {
+        "collapsed": true,
+        "style": {}
       }
+    },
+    "11": {
+      "title": "Bezier Ellipse ",
+      "id": 20
     }
   },
   "resources": {
