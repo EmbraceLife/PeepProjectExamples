@@ -1,32 +1,46 @@
 /** @peep sketch */
-size(256, 256);
-colorMode(RGB);
-for (int i = 0; i < width; i++) { 
- stroke(i, 255, 255); 
- line(i, 0, i, height); 
-}
+void setup() {
+size(400, 400); 
+frameRate(10);
+};
+void draw() {
 
+ fill(random(100,255),random(100,255),random(100,255));
+ beginShape();
+ for (int y =10; y <= 10; y += 10){
+       if (y < 30) {
+       //fill(51, 153, 255)
+       //fill(random(100,255),random(100,255),random(100,255));
+       vertex(150, y);
+       vertex(220, y);
+       vertex(310, y);
+       vertex(150, y+10);
+       vertex(220, y+10);
+ 
+     }
+ }
+ 
+ endShape(CLOSE);
+};
 
 
 ///** @peep sketch */
-//size(256, 256);
-//colorMode(HSB); 
-//for (int i = 0; i < width; i++) { 
-// stroke(i, 255, 255); 
-// line(i, 0, i, height); 
+//void setup() {
+//size(400, 400); 
+//frameRate(10);
+//};
+//void draw() {
+//beginShape();
+//for (int y =10; y <= 400; y += 10){
+//     if (y < 400) {
+//     //fill(51, 153, 255)
+//     fill(random(100,255),random(100,255),random(100,255));
+//     vertex(150, y);
+//     vertex(220, y);
+//     vertex(310, y);
+ 
+//   }
 //}
-
-
-//color(value);
-//color(value, alpha);
-//color(value1, value2, value3);
-//color(value1, value2, value3, alpha);
-
-///** @peep sketch */
-//color ruby = color(211, 24, 24, 160); 
-//color pink = color(237, 159, 176);
-//size(200, 200);
-//background(pink); 
-//noStroke(); 
-//fill(ruby); 
-//rect(35, 0, 20, 100);
+ 
+//endShape(CLOSE);
+//};
