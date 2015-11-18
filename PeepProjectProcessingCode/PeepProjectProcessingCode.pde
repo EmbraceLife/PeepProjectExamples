@@ -1,47 +1,51 @@
-///** @peep sketchcode */
-//float power = 6; // Turbulence power 
-//float d = 16; // Turbulence density 
+// Using Randomness and Noise
+
+/** @peep sketch */
+size(300, 300);
+smooth();
+float s = 4;
+noFill();
+for (int y = 20; y <= height-20; y += 10) {
+ float ny = y * 0.04;
+ beginShape();
+ for (int x = 20; x <= width-20; x++) {
+   float nx = x * 0.04;
+   vertex(x + s*(noise(nx,ny)-0.5), y + s*(noise(ny,nx)-0.5));
+ }
+ endShape();
+} 
+for (int x = 20; x <= width-20; x += 10) {
+ float nx = x * 0.04;
+ beginShape();
+ for (int y = 20; y <= height-20; y++) {
+   float ny = y * 0.04;
+   vertex(x + s*(noise(nx,ny)-0.5), y + s*(noise(ny,nx)-0.5));
+ }
+ endShape();
+}
+
+
+
+///** @peep sketch */
 //size(200, 200);
-//noiseSeed(0);
-//for (int y = 0; y < height; y++) { 
-//  for (int x = 0; x < width; x++) { 
-//    float turbulence = 0.0; 
-//    for (float i = d; i >= 1; i = i/2) { 
-//      turbulence += power * noise(x/d, y/d) * i/d;
-//    }
-//    float gray = abs(sin(x*0.05 + y*0.03 + turbulence)) * 255;
-//    stroke(gray); 
-//    point(x, y); 
-//  } 
+//smooth();
+//float s = 40;
+//noFill();
+//for (int y = 20; y <= height-20; y += 10) {
+//  float ny = y * 0.04;
+//  beginShape();
+//  for (int x = 20; x <= width-20; x++) {
+//    float nx = x * 0.04;
+//    vertex(x + s*(noise(nx,ny)-0.5), y + s*(noise(ny,nx)-0.5));
+//  }
+//  endShape();
+//} 
+//for (int x = 20; x <= width-20; x += 10) {
+//  float nx = x * 0.04;
+//  beginShape();
+//  for (int y = 20; y <= height-20; y++) {
+//    float ny = y * 0.04;
+//    vertex(x + s*(noise(nx,ny)-0.5), y + s*(noise(ny,nx)-0.5));
+//  }
+//  endShape();
 //}
-
-
-/** @peep sketchcode */
-float power = 6; // Turbulence power 
-float d = 16; // Turbulence density 
-size(200, 200);
-noiseSeed(0);
-for (int y = 0; y < 50; y+=5) { 
-  for (int x = 0; x < 50; x+=5) { 
-    float turbulence = 0.0; 
-    for (float i = d; i >= 1; i = i/2) { 
-      turbulence += power * noise(x/d, y/d) * i/d;
-    }
-    float gray = abs(sin(x*0.05 + y*0.03 + turbulence)) * 255;
-    noStroke(); 
-    fill(gray);
-    rect(x, y, 5, 5); 
-  } 
-}
-
-for (int y = height; y > height-50; y--) { 
-  for (int x = width; x > width-50; x--) { 
-    float turbulence = 0.0; 
-    for (float i = d; i >= 1; i = i/2) { 
-      turbulence += power * noise(x/d, y/d) * i/d;
-    }
-    float gray = abs(sin(x*0.05 + y*0.03 + turbulence)) * 255;
-    stroke(gray); 
-    point(x, y); 
-  } 
-}
