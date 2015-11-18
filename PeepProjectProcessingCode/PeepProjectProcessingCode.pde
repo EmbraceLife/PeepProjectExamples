@@ -1,24 +1,59 @@
-/** @peep sketchcode */
-size(200, 200); 
-noFill();
-stroke(0, 128);
-for (int y = 20; y < height; y += 20) { 
- for (int x = 20; x < width; x += 20) { 
-   for (int d = 10; d < 50; d += 5) {
-     ellipse(x, y, d, d);
-   }
- } 
-}
-
 ///** @peep sketchcode */
 //size(200, 200); 
-//noFill();
-//stroke(0, 128);
-//for (int y = 20; y < 40; y += 20) { 
-//  for (int x = 20; x < 40; x += 20) { 
-//    for (int d = 10; d < 40; d += 5) {
-//      ellipse(x, y, d, d);
+//for (int y = 20; y <= height - 20; y += 10) {
+//  for (int x = 20; x <= width - 20; x += 10) {
+//    if ((x % 20) == 0) {
+//      line(x, y, x+6, y-6);
+//    } else {
+//      line(x, y, x+6, y+6);
 //    }
 //  } 
 //}
-//smooth();
+
+///** @peep sketchcode */
+//size(200, 200); 
+//for (int y = 20; y <= height - 20; y += 10) {
+//  for (int x = 20; x <= width - 20; x += 10) {
+//    if ((x % 20) == 0) {
+//      line(x-5, y+5, x+5, y-5);
+//    } else {
+//      line(x-5, y-5, x+5, y+5);
+//    }
+//  } 
+//}
+
+///** @peep sketchcode */
+//size(200, 200); 
+//for (int y = 20; y <= height - 20; y += 10) {
+//  for (int x = 20; x <= width - 20; x += 10) {
+//    if ((x % 20) == 0 || (x % 50) == 0) {
+//      line(x-5, y+5, x+5, y-5);
+//    } else {
+//      line(x-5, y-5, x+5, y+5);
+//    }
+//  } 
+//}
+
+///** @peep sketchcode */
+//size(200, 200); 
+//for (int y = 20; y <= 20; y += 10) {
+//  for (int x = 20; x <= 70 - 20; x += 10) {
+//    if ((x % 20) == 0 || (x % 50) == 0) {
+//      line(x-5, y+5, x+5, y-5);
+//    } else {
+//      line(x-5, y-5, x+5, y+5);
+//    }
+//  } 
+//}
+
+/** @peep sketchcode */
+size(200, 200); 
+for (int y = 20; y <= height - 20; y += 10) {
+  for (int x = 20; x <= width - 20; x += 10) {
+    if ((x % 30) == 0 || (y % 50) == 0) {
+      line(x-5, y+5, x+5, y-5);
+    } else {
+      line(x-5, y-5, x+5, y+5);
+    }
+  } 
+}
